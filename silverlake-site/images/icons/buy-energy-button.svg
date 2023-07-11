@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="157" height="157" viewBox="0 0 157 157">
+  <defs>
+    <filter id="a" x="0" y="0" width="157" height="157" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feFlood flood-color="#8000ff"/>
+      <feComposite operator="in" in2="b"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="c" x="23" y="16.789" width="110" height="53" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="d"/>
+      <feFlood flood-color="#8000ff"/>
+      <feComposite operator="in" in2="d"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="e" x="23" y="82.645" width="110" height="53" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="f"/>
+      <feFlood flood-color="#8000ff"/>
+      <feComposite operator="in" in2="f"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="g" x="50.25" y="44.145" width="55.5" height="68.711" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="h"/>
+      <feFlood flood-color="#8000ff"/>
+      <feComposite operator="in" in2="h"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="translate(15 15)">
+    <g transform="matrix(1, 0, 0, 1, -15, -15)" filter="url(#a)">
+      <g transform="translate(15 15)" fill="#281861" stroke="#d3b7ff" stroke-width="3" opacity="0.999">
+        <circle cx="63.5" cy="63.5" r="63.5" stroke="none"/>
+        <circle cx="63.5" cy="63.5" r="62" fill="none"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -15, -15)" filter="url(#c)">
+      <text transform="translate(34 27.79)" fill="#d3b7ff" stroke="rgba(255,127,88,0)" stroke-width="2" font-size="24" font-family="SourceCodePro-Regular, Source Code Pro">
+        <tspan x="21.6" y="24">BUY</tspan>
+      </text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -15, -15)" filter="url(#e)">
+      <text transform="translate(34 93.64)" fill="#d3b7ff" stroke="rgba(255,127,88,0)" stroke-width="2" font-size="24" font-family="SourceCodePro-Regular, Source Code Pro">
+        <tspan x="21.6" y="24">NOW</tspan>
+      </text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -15, -15)" filter="url(#g)">
+      <path d="M12.133,1.928,2.571,21.284h9.562L5.758,40.639,28.071,16.445H15.321L24.883,1.928Z" transform="translate(62.68 57.22)" fill="#d3b7ff"/>
+    </g>
+  </g>
+</svg>

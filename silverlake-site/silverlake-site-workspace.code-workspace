@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Responsive-nav-code/responsive-navigation-code"
+		},
+		{
+			"path": "../old site build files"
+		},
+		{
+			"path": "../silverlake-experiments"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "silverlake-site"
+	}
+}

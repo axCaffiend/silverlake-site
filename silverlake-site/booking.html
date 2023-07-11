@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Lake - Booking</title>
+
+    <link rel="stylesheet" href="silverlake.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="page-wrap">
+
+        <!-- HEADER -->
+
+        <header id="page-top">
+
+            <div class="header-logo">
+                <img src="images/silver-lake-logo.svg" alt="Silverlake logo">
+            </div>
+
+            <nav class="main-nav">
+
+
+            <div class="mobile-nav-format">
+
+                <div class="scroll-message">
+                    <p>Open today 10AM - 10PM</p>
+                </div>
+
+                <button class="nav-toggle" aria-expanded="false" aria-controls="menu" data-menu-button>
+
+                    <img src="images/icons/burger-menu.svg" alt="Expand mobile menu (burger menu) icon" width="76" height="61" class="open" data-menu-button-closed>
+
+                    <img src="images/icons/close-button.svg" alt="Close mobile menu icon" width="76" height="61" class="closed" data-menu-button-open>
+
+                    Menu
+                </button>
+            </div>
+
+                <ul id="menu" data-menu>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experiences.html">Experiences</a></li>
+                    <li><a href="plan-your-visit.html">Plan Your Visit</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                </ul>
+
+
+            </nav>
+
+        </header>
+
+
+    <!-- MAIN -->
+    
+        <main class="booking">
+            <section class="intro">
+
+                <p>Ready for your next adventure at Silver Lake? Book your tickets now!</p>
+
+                <article class="supercharge-app">
+                    <div class="image-h2">
+                        <h2>Super-charge App</h2>
+                        <img src="images/supercharge-ad/supercharge-app-tablet-desktop.jpg" alt="Mock up of Supercharge app home screen">
+                    </div>
+                    <div class="text">
+                        
+                        <p> Let our app SUPERCHARGE your experience!</p>
+                        <ul>
+                            <li>PRELOAD credits to spend in the park for special discounts - just scan your unique QR code to pay. Comes with a family option to share across multiple devices.</li>
+                            
+                            <li>DISCOVER hidden minigames just tap your device when you find the hidden markers</li>
+                            
+                            <li>ACCESS extra ride features, park map and more...</li>
+                        </ul>
+
+                        <img src="images/icons/scroll-down-chevrons.svg">
+                    </div>
+                </article>
+
+                <h1>Start Your Booking</h1>
+            </section>
+
+            <!--  BOOKING FORM  -->
+
+            <form class="booking-form" action="booking-form.php">
+
+                <!-- Date -->
+                <fieldset>
+                    <label for="booking-date">Select a date</label>
+                    <input type="date" id="booking-date" name="booking-date">
+                </fieldset>
+
+
+                <!-- NOTE: buttons on form don't work, incremenet/decrement ticket values can't be styled -->
+
+                <!-- Tickets -->
+                
+                <fieldset class="tickets">
+                    <legend>Tickets</legend>
+                    <fieldset>
+                        <label for="adult-tickets">Adult £60.00</label>
+                        <div>
+                            <button><img src="images/icons/Icon-feather-minus-circle.svg" alt="Decrease button"></button>
+
+                            <input type="number" id="adult-tickets" name="adult-tickets" min="1" max="20" step="1">
+
+                            <button onclick="inc('adult-tickets')"><img src="images/icons/Icon-feather-plus-circle.svg" alt="Increase button"></button>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="junior-tickets">Junior (under 16 yrs) £45.00</label>
+
+                        <div>
+                            <button><img src="images/icons/Icon-feather-minus-circle.svg" alt=""></button>
+
+                            <input type="number" id="junior-tickets" name="junior-tickets" min="1" max="20" step="1">
+
+                            <button><img src="images/icons/Icon-feather-plus-circle.svg" alt=""></button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="concession-tickets">Concessions £50.00</label>
+
+                        <div>
+                            <button><img src="images/icons/Icon-feather-minus-circle.svg" alt=""></button>
+
+                            <input type="number" id="concession-tickets" name="adult-tickets" min="1" max="20" step="1">
+
+                            <button><img src="images/icons/Icon-feather-plus-circle.svg" alt=""></button>
+                        </div>
+
+                    </fieldset>
+                </fieldset>
+
+                <!--- Extras- -->
+
+                <fieldset class="extras">
+
+                    <legend>Extras</legend>
+                    <fieldset>
+                        <fieldset class="annual-membership">
+                            <label for="annual-membership">
+                                ANNUAL MEMBERSHIP<br>
+                                For just £3/month (£32/year) become a Citizen of Silverlake! Perks include:
+                                <ul>
+                                    <li>20% off day passes </li>
+                                    <li>Exclusive offers and discounts on merchandise and Supercharge Credits</li>
+                                    <li>A free guest voucher</li>
+                                </ul>
+                            </label>
+
+                            <div>
+                                <button><img src="images/icons/Icon-feather-minus-circle.svg" alt=""></button>
+
+                                <input type="number" id="annual-membership" name="annual-membership" min="0" max="20" step="1">
+
+                                <button><img src="images/icons/Icon-feather-plus-circle.svg" alt=""></button>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="parking">
+                            <label for="parking">
+                                PARKING
+                                Pre-book your parking for the day £5/vehicle
+                            </label>
+
+                            <div>
+                                <button><img src="images/icons/Icon-feather-minus-circle.svg" alt=""></button>
+
+                                <input type="number" id="parking" name="parking" min="0" max="20" step="1">
+
+                                <button><img src="images/icons/Icon-feather-plus-circle.svg" alt=""></button>
+                            </div>
+
+                        </fieldset>
+                    </fieldset>
+
+                    <!-- Supercharge credits -->
+
+                    <fieldset class="supercharge-credits">
+                        <h2>Supercharge Energy Credits</h2>
+                        <p>Add Supercharge credits to your order, ready for your trip. Pay with your Supercharge App and get exclusive discounts and offers on the day!</p>
+
+                        <label for="supercharge-100">100 credits = £2.50
+                        </label>
+
+                        <div>
+                            <button><img src="images/icons/Icon-feather-minus-circle.svg" alt=""></button>
+                            <input type="number" id="supercharge-100" name="supercharge-100" min="0" step="1">
+                            <button><img src="images/icons/Icon-feather-plus-circle.svg" alt=""></button>
+                        </div>
+
+                        <label for="supercharge-250">250 credits = £5.00
+                        </label>
+
+                        <div>
+                            <button><img src="images/icons/Icon-feather-minus-circle.svg" alt=""></button>
+                            <input type="number" id="supercharge-250" name="supercharge-250" min="0" step="1">
+                            <button><img src="images/icons/Icon-feather-plus-circle.svg" alt=""></button>
+                        </div>
+
+                        <label for="supercharge-500">500 credits = £9.00
+                        </label>
+
+                        <div>
+                            <button><img src="images/icons/Icon-feather-minus-circle.svg" alt=""></button>
+                            <input type="number" id="supercharge-500" name="supercharge-500" min="0" step="1">
+                            <button><img src="images/icons/Icon-feather-plus-circle.svg" alt=""></button>
+                        </div>
+
+                        <div class="supercharge-total">
+                            <h2>Energy: 0000</h2> 
+                        </div>
+                        
+                    </fieldset>
+                </fieldset>
+
+                <table class="booking-summary">
+                    <tr>
+                        <th colspan="3">Booking Summary</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">Tickets</td>
+                        </tr>
+
+                        <tr>
+                            <td>Adult</td>
+                            <td>x 2</td>
+                            <td>£120.00</td>
+                        </tr>
+                        <tr>
+                            <td>Junior</td>
+                            <td>x 1</td>
+                            <td>£45.00</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3">Extras</td>
+                        </tr>
+                        <tr>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">TOTAL</td>
+                            <td>£165.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button type="submit">Add Booking</button>
+
+            </form>
+
+
+
+        </main>
+
+
+
+
+    <!-- FOOTER -->
+
+        <footer>
+            <div class="footer-logo">
+                <img src="images/silver-lake-logo.svg" alt="Silver Lake logo">
+            </div>
+
+            <div class="back-to-top">
+                <a href="#page-top">Back to top</a>
+            </div>
+
+            <div class="footer-flex">
+
+                <div class="signup-form">
+                    <form action="sign-up-script.php" method="post" name="sign-up-form">
+                        <fieldset>
+                            <legend>Keep up to date with the latest news and offers!</legend>
+                            
+                            <label for="signup-name">Name</label>
+                            <input type="text" id="signup-name" name="signup-name" placeholder=">>> your name">
+
+                            <label for="signup-email">Email address</label>
+                            <input type="text" id="signup-email" name="signup-email" placeholder=">>> example@email.com">
+                        </fieldset>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+
+                    <div class="social-media-links">
+                        <a href="https://en-gb.facebook.com/" target="_blank"><img src="images/icons/facebook-icon.svg" alt="Icon link to Facebook page"></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="images/icons/instagram-icon.svg" alt="Icon link to Instagram page"></a>
+                        <a href="https://www.tiktok.com/" target="_blank"><img src="images/icons/tiktok-icon.svg" alt="Icon link to Tiktok page"></a>
+                    </div>
+
+                    <p>
+                        Silver Lake Park 
+                        Skirethorns
+                        Skipton 
+                        BD23 5NX<br>
+                        01756 123456<br>
+                        info@silverlake-park.com
+                    </p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>All Contents © Copyright 2023 Silver Lake. All Rights Reserved.</p>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="/javascript/mobile-menu.js"></script>
+
+
+
+</body>
+</html>

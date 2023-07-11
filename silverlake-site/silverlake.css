@@ -1,0 +1,787 @@
+/* NOTES
+    - Finish styling footer (from social media icons, also change form and button sizing for mobile emulator in browser)
+    - Start on main page content
+*/
+
+
+
+
+
+/***********************************\
+* GLOBAL                            *
+\***********************************/
+
+:root {
+    --pagebg:#2B205A;
+    --greentext: #00FFD5;
+    --greenbg:  #003F34DF;
+    --redborder: #FF7F58;
+    --redglow: #FF3B00;
+    --purpleglow: #8000FF;
+    --purpleborder: #D3B7FF;
+    --purplebg: #281861;
+    --yellowborder: #FFF291;
+    --yellowglow: #FFE100;
+    --yellowbg: #36331B;
+    --h-stroke-width: 2px;
+
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 50%, rgba(0,0,0,1) 100%);
+
+    color: #fff;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+}
+
+.page-wrap {
+    margin: 0 auto;
+}
+
+a {
+    border: solid 2px var(--greentext);
+    box-shadow: 0 0 6px var(--greentext);
+    padding: 0.5em;
+    background-color: var(--greenbg);
+
+    font-size: 1.25em;  
+    text-decoration: none;
+    color: var(--greentext);
+    text-shadow: 0 0 6px var(--greentext);
+
+
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/***********************************\
+* HEADER                             *
+\***********************************/
+header {
+    margin: 0 auto;
+    max-width: 100%;
+    color: var(--greentext);
+    text-shadow: 0 0 3px var(--greentext);
+}
+
+.header-logo {
+    margin: 0 auto;
+    background: url("/images/header/header-image-main.jpg") no-repeat bottom;
+    background-size: cover;
+
+    border: solid 1px #000 /* cover doesn't work without border?? set to invisible colour*/
+}
+
+.header-logo img {
+    display: block;
+    margin: 25% auto;
+    max-width: 90%;
+    height: auto;
+}
+
+
+.scroll-message {
+    margin: 0 auto;
+    padding: 0.5em;
+    width: 100%;
+    background-color: var(--greenbg);
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.scroll-message p {
+    transform: translateX(100%);
+    animation: scroll 12s linear infinite;
+}
+
+
+/* ------ NAV ------- */
+.mobile-nav-format {
+    margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav {
+    margin: 0 auto;
+}
+
+.main-nav ul {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 1em;
+    list-style: none;
+    background-color: var(--greenbg);
+}
+
+.main-nav ul li {
+    width: 85%;
+}
+
+.main-nav ul li a {
+    display: block;
+    width: 100%;
+    margin: 1em auto;
+    padding: 1em;
+    text-align: center;
+    border: solid 2px var(--greentext);
+    box-shadow: 0 0 6px var(--greentext), inset 0 0 6px var(--greentext);
+}
+
+.main-nav ul li a:link {
+    color: var(--greentext);
+    text-decoration: none;
+}
+
+.main-nav ul li a:visited {
+    color: var(--greentext);
+    text-decoration: none;
+}
+
+.main-nav ul li a:hover {
+    box-shadow: inset 0 0 20px var(--greentext);
+}
+
+.main-nav ul li a:active {
+    box-shadow: inset 0 0 20px var(--greentext);
+    text-decoration: underline;
+}
+
+
+.nav-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    
+    border: none;
+    background-color: var(--greenbg);
+    color: var(--greentext);
+    text-shadow: 0 0 3px var(--greentext);
+    font-family: "Source Code Pro", monospace;
+    
+}
+
+/***********************************\
+* FOOTER                            *
+\***********************************/
+
+footer {
+    position: relative;
+    margin-top: 20%;
+    max-width: 100%;
+    text-align: center;
+    background-color: #000;
+    padding-bottom: 3em;
+}
+
+footer .copyright a , footer .social-media-links a {
+    border:  none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+footer .social-media-links {
+    display: flex;
+    justify-content: center;
+}
+
+
+.footer-logo {
+    margin: 0 auto;
+    position: relative;
+    transform: translate(0,-25%);
+    width: 80%;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.back-to-top {
+    margin: 0em 0em 3em 0em;
+}
+
+.back-to-top a {
+
+    background-color: transparent;
+    box-shadow: none; 
+    border-top: solid 2px var(--greentext);
+    border-right: none;
+    border-bottom: solid 2px var(--greentext);
+    border-left: none;
+    
+}
+
+.signup-form {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.signup-form fieldset {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    border: none;
+
+}
+
+.signup-form label, .signup-form input[type=text] { 
+    margin: 1em auto;
+    display: block;
+    width: 80%;
+    color: var(--greentext);
+    text-shadow: 0 0 6px var(--greentext);
+    font-size: 1.25em;
+
+}
+
+.signup-form input[type=text] {
+    padding: 0.75em;
+    background-color: var(--greenbg);
+    border: solid 2px var(--greentext);
+    box-sizing: border-box;
+    
+}
+
+.signup-form input::placeholder {
+    opacity: 0.4;
+    color: var(--greentext);
+}
+
+.signup-form button[type=submit] {
+    margin: 1em auto;
+    width: 50%;
+    padding: 1em;
+    display: block;
+    background-color: var(--greenbg);
+    border: solid 2px var(--greentext);
+    color: var(--greentext);
+    text-shadow: 0 0 6px var(--greentext);
+    text-transform: uppercase;
+    font-size: 1.25em;
+}
+
+
+/***********************************\
+* MAIN                             *
+\***********************************/
+
+h1, h2, h3 {
+    word-wrap:break-word;
+}
+
+h1, h2 {
+
+    text-transform: uppercase;
+    mix-blend-mode:color-dodge;
+    color: #000000FE;
+    text-shadow: 
+                /* text outline */
+                var(--h-stroke-width) 0 0 var(--redborder), 
+                0 var(--h-stroke-width) 0 var(--redborder),
+                calc(var(--h-stroke-width) * -1) 0 0 var(--redborder),
+                0 calc(var(--h-stroke-width) * -1) 0 var(--redborder),
+
+                /* glow */
+                0 0 var(--redglow)
+                ;
+    margin: 0 auto;
+    margin-left: 0.5em;
+
+}
+
+h1 {
+    font-size: 3.4em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+main p {
+    background-color: #000;
+    padding: 1.2em;
+    margin: 0.5em;
+    box-shadow: 0 0 6px var(--greentext);
+    box-sizing: border-box;
+    line-height: 1.5em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+/* ------------------------------ */
+/*        INFO BLOCKS        */
+/* ------------------------------ */
+
+.info-block {
+    max-width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.info-block-image {
+    border: solid 1px var(--greentext);
+    position: relative;
+    max-width: 90%;
+    overflow: hidden;
+}
+
+.info-block-image img {
+    display: block;
+    width: 100%;
+}
+
+.info-block-image a {
+    display: block;
+    position: absolute;
+    right: 2.5%;
+    bottom: 5%;
+    z-index: 1;
+    
+}
+
+.info-block-text {
+    max-width: 90%;
+    margin-left: 10%;
+}
+
+.info-block-text h3 {
+    font-weight: normal;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    margin-bottom: 0.1em;
+    color: var(--greentext);
+    text-shadow: 0 0 6px var(--greentext);
+
+}
+
+article.info-block:nth-child(odd) .info-block-image {
+    margin-left: 10%;
+    margin-right: 0;
+}
+
+article.info-block:nth-child(odd) .info-block-text {
+    margin-left: 0;
+    margin-right: 10%;
+    text-align: right;
+}
+
+article.info-block:nth-child(odd) .info-block-text h3 {
+    margin-left: 0;
+    margin-right: 0.5em;
+}
+/* ------------------------------ */
+/*    SUPERCHARGE ADS        */
+/* ------------------------------ */
+
+.supercharge-app h2 {
+    mix-blend-mode: normal;
+    font-family: Orbitron, monospace;
+    font-size: 2em;
+    color: var(--purpleborder);
+    text-shadow: 0 0 6px var(--purpleglow);
+    margin-left: 0.5em;
+}
+
+.supercharge-app .image-h2 img {
+    max-width: 100%;
+    border: solid 1px var(--purpleglow)
+}
+
+.supercharge-app p {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.supercharge-app .text {
+    position: relative;
+    background-color: #000;
+    padding-top: 1.25em;
+    padding-right: 1.25em;
+    padding-left: 1.25em;
+    padding-bottom: 0;
+    box-shadow: 0 0 6px var(--purpleglow);
+}
+
+.supercharge-app .text a {
+    box-shadow: none;
+    border: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* -------- HOME ---------- */
+.home-welcome {
+    text-align: center;
+}
+
+.home-welcome img {
+    margin: 0 auto;
+}
+
+main.home .banner-ad img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.home-opening-times .centering-container {
+    position: relative;
+    background-color: #000;
+    padding: 1.25em;
+    box-shadow: 0 0 6px var(--greentext);
+}
+
+.home-opening-times p {
+    background-color: transparent;
+    box-shadow: none;
+    text-align: center;
+}
+
+.home-opening-times table {
+    margin: 0 auto;
+}
+
+.home-opening-times table td {
+    padding: 0.5em;
+}
+
+/* --------- EXPERIENCES ------- */
+.experiences .intro .day-pass-ad a {
+    display: block;
+    max-width: 15em;
+    margin: 0 auto;
+    color: #fff;
+    border: solid 2px var(--yellowborder);
+    background-color: var(--yellowbg);
+    box-shadow: 0 0 6px var(--yellowglow);
+    text-align: center;
+    text-shadow: none;
+}
+
+
+
+
+/* -------- BOOKING  ---------- */
+
+.booking-form legend {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    margin-bottom: 0;
+    color: var(--greentext);
+    text-shadow: 0 0 6px var(--greentext);
+    transform: translateY(-0.75em);
+}
+
+.booking-form input {
+    display: block;
+    background-color: var(--greenbg);
+    color: #fff;
+    font-family: "Source Code Pro", monospace;
+    font-size: 1em;
+    padding: 0.75em;
+    border: solid 2px var(--greentext);
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.booking-form input[type="date"] {
+    margin: 0 auto;
+}
+.booking-form input[type="number"] {
+    max-width: 4em;
+}
+
+.booking-form input[type="date"] {
+
+    max-width: 10em;
+}
+
+.booking-form button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.booking-form button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    
+    border: solid 2px var(--greentext);
+    box-shadow: 0 0 6px var(--greentext);
+    padding: 0.5em;
+    background-color: var(--greenbg);
+
+
+    font-size: 1.25em;  
+    text-decoration: none;
+    color: var(--greentext);
+    text-shadow: 0 0 6px var(--greentext);
+}
+
+.booking-form > fieldset, .booking-form table {
+    background-color: #000;
+    border: none;
+    padding: 1em;
+    margin: 3em auto;
+    box-shadow: 0 0 6px var(--greentext);
+    box-sizing: border-box;
+    line-height: 1.5em;
+    width: 80%;
+}
+
+.booking-form table td {
+    border-bottom: solid 1px #fff;
+}
+
+fieldset {
+    border: none;
+    margin: 1em auto;
+}
+
+.booking-form label, .booking-form div {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.booking-form label ul {
+    text-align: left;
+}
+
+.booking-form p {
+    box-shadow: none;
+}
+
+.booking-form div {
+    display: flex;
+    justify-content: center;
+}
+
+.booking-form .supercharge-credits label {
+    background-color: var(--purplebg);
+    border: solid 1px var(--purpleborder);
+    box-shadow: 0 0 6px var(--purpleglow);
+    padding: 1em 0em 1em 0em;
+    margin: 2.5em 1em 1em 1em;
+}
+
+.booking-form .supercharge-credits h2 {
+    mix-blend-mode: normal;
+    font-family: Orbitron, monospace;
+    font-size: 1.5em;
+    color: var(--purpleborder);
+    text-shadow: 0 0 6px var(--purpleglow);
+    margin-left: 0.5em;
+}
+
+.booking-form .supercharge-total {
+    margin-top: 2em;
+    padding: 1em;
+    border: solid 2px var(--purpleborder);
+    box-shadow: 0 0 6px var(--purpleglow);
+}
+
+/***********************************\
+* ANIMATION                        *
+\***********************************/
+
+@keyframes scroll {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%);}
+
+}
+
+
+
+
+/***********************************\
+*      MEDIA QUERIES                *
+\***********************************/
+
+@media screen and (min-width: 480px) {
+    .header-logo img {
+        margin: 8em auto;
+    }
+
+    .footer-logo {
+        max-width: 25em;
+    }
+
+}
+
+@media screen and (min-width: 768px){
+
+    /*---------------------*\
+    *    HEADER             *
+    \*---------------------*/
+    .nav-toggle {
+        display: none;
+    }
+
+    .main-nav ul {
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .main-nav ul li {
+        margin: 1em;
+        max-width: 20em;
+    }
+
+    .main-nav ul li a{
+        margin: 0;
+        padding: 0.5em;
+    }
+
+    /*------------------*\
+     *   FOOTER         *
+    \*------------------*/
+
+    footer .footer-flex {
+        display: flex;
+        margin: 2em auto;
+        justify-content: space-around;
+    }
+
+    footer .signup-form {
+        margin: 0;
+    }
+
+
+    /*------------------*\
+     *   MAIN           *
+    \*------------------*/
+    
+.home-welcome, .intro {
+        max-width: 50em;
+        margin: 0 auto;
+    }
+
+    section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 1em;
+    }
+
+    section h1, h2 {
+        flex: 100%;
+        text-align: center;
+        font-size: 6em;
+    }
+
+
+    .info-block {
+        max-width: 45%;
+        margin: 1em;
+    }
+
+    
+    .info-block-image {
+        max-width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    
+    .info-block-image img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .info-block-image a {
+        display: block;
+        position: absolute;
+        right: 2.5%;
+        bottom: 5%;
+        z-index: 1;
+        
+    }
+    
+    .info-block-text {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    article.info-block:nth-child(odd) .info-block-image {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    article.info-block:nth-child(odd) .info-block-text {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+    }
+
+    /* ------- ACCESS -------- */
+
+    .access .section-title, .facilities .section-title {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .access .section-title img, .facilities .section-title img{
+        max-width: 9em;
+    }
+    
+    .access h1, .access h2, .facilities h1, .facilities h2 {
+        flex: 0;
+    }
+
+    .access .info-block-image {
+        
+        max-width: 60%;
+        margin: 5em 0 0 0;
+        order: 3;
+    }
+
+    /* -------- BOOKING ------------- */
+
+    .extras {
+        display: flex;
+    }
+
+    .booking-form table {
+        max-width: 40em;
+    }
+
+
+    /*--------------------------*\
+     *    ANIMATION             *
+    \*--------------------------*/ 
+    
+    .scroll-message p {
+        transform: translateX(100%);
+        animation: scroll 30s linear infinite;
+    }
+    
+    
+
+}
+
+
+
